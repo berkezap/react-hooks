@@ -21,9 +21,9 @@ const reducer = (state, action) => {
 function App() {
   const [count, dispatch] = useReducer(reducer, initialValue);
 
-  useEffect (()=>{
-console.log("render oldu")
-  },[count])
+  useEffect(() => {
+    console.log("render oldu");
+  }, [count]);
   return (
     <div className="App">
       <NumberContext.Provider value={{ count: count, dispatch: dispatch }}>
